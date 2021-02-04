@@ -5,6 +5,7 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 import { logout } from "../actions/userActions";
 import { useHistory } from "react-router-dom";
+import SearchBox from "./SearchBox";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ const Header = () => {
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            <SearchBox history={history} />
             <Nav className="ml-auto">
               <LinkContainer to="/cart">
                 <Nav.Link>
